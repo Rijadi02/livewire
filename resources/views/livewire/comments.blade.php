@@ -18,7 +18,9 @@
                <div class="card-body">
                  <h5 class="card-title">{{$comment->creator->name}}</h5>
                  <p class="card-text">{{$comment->body}} <br></p>
-                 <a href="#" class="btn btn-primary">{{$comment->created_at->diffForHumans()}}<br>
+                 <a href="#" class="btn btn-primary">{{$comment->created_at->diffForHumans()}}</a>
+                 <a href="#" class="btn btn-danger" wire:click="remove({{$comment->id}})" >Delete</a>
+
                  </a>
                </div>
              </div>
