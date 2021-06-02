@@ -30,6 +30,7 @@ class Comments extends Component
         $createdComment = Comment::create(['body' =>$this->newComment, 'user_id' => 1 ]);
         $this->comments->prepend($createdComment);
         $this->newComment = "";
+        session()->flash('message','Comment added successfully 😃');
 
 
     }

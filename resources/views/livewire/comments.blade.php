@@ -9,6 +9,13 @@
             </div>
             @error('newComment') <span class="error">{{ $message }}</span> @enderror
 
+            <div>
+                @if (session()->has('message'))
+                    <div class="alert alert-success">
+                        {{ session('message') }}
+                    </div>
+                @endif
+            </div>
             @foreach ($comments as $comment)
 
             <div class="card mt-5">
