@@ -9,7 +9,7 @@
             </div>
             @error('newComment') <span class="error">{{ $message }}</span> @enderror
 
-            <div>
+            <div class="mt-5 ml-5  mr-5">
                 @if (session()->has('message'))
                     <div class="alert alert-success">
                         {{ session('message') }}
@@ -39,6 +39,7 @@
             @endforeach
         </div>
     </div>
+    {{$comments->links('pagination-links')}}
 
 
 
